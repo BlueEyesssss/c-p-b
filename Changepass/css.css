@@ -17,15 +17,15 @@ p{
     text-align: center;
     margin: 1em auto;
 }
-#inputt{
+#inputt, #inputt1 {
     width: 20rem;
     margin-left: 5.5rem;
 }
-#sm{
+#sm, #sm1{
     width: 5rem;
     margin-left: 13.1rem;
 }
-#resultt{
+#resultt, #resultt1{
     width: 20rem;
     margin-left: 5.5rem;
     height: 20rem;

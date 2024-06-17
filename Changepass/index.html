@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+    <title>Test</title>
+    <style>
+        body {
+            background-color: pink;
+        }
+
+        #container {
+            border: 5px solid;
+            border-radius: 20px;
+            box-shadow: 7px 7px rgb(18, 230, 11);
+            width: 500px;
+            height: auto;
+            margin: 0 auto;
+            margin-top: 4rem;
+        }
+
+        p {
+            text-transform: uppercase;
+            font-size: large;
+            width: 8em;
+            text-align: center;
+            margin: 1em auto;
+        }
+
+        #inputt, #inputt1 {
+            width: 20rem;
+            margin-left: 5.5rem;
+        }
+
+        #sm, #sm1 {
+            width: 5rem;
+            margin-left: 13.1rem;
+        }
+
+        #resultt, #resultt1 {
+            width: 20rem;
+            margin-left: 5.5rem;
+            height: 20rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <p>Input code</p>
+        <input id="inputt" type="text" placeholder="nhập code"> <br><br>
+        <input type="submit" id="sm" value="Change" onclick="ChangeeCode()">
+        <p>Output</p> 
+        <textarea id="resultt"></textarea><br><br>
+        
+    </div>
+    <div id="container">
+        <p>Input pass</p>
+        <input id="inputt1" type="text" placeholder="nhập pass"> <br><br>
+        <input type="submit" id="sm1" value="Change" onclick="ChangeePass()">
+        <p>Output</p> 
+        <textarea id="resultt1"></textarea><br><br>
+        
+    </div>
+ <!--  <script src="jsa.js"></script> -->
+    <script>
+        function ChangeeCode() {
+            var inputt = document.getElementById("inputt");
+            var outputt = document.getElementById("resultt");
+            var s = "";
+            if (document.getElementById("sm").onclick) {
+                for (let i = 0; i < inputt.value.length; i++) {
+                    var a = inputt.value.charCodeAt(i) - 1;
+                    s = s.concat(String.fromCharCode(a));
+                }
+                outputt.value = s;
+            }
+        }
+        function ChangeePass() {
+            var inputt = document.getElementById("inputt1");
+            var outputt = document.getElementById("resultt1");
+            var s = "";
+            if (document.getElementById("sm1").onclick) {
+                for (let i = 0; i < inputt.value.length; i++) {
+                    var a = inputt.value.charCodeAt(i) + 1;
+                    s = s.concat(String.fromCharCode(a));
+                }
+                outputt.value = s;
+            }
+        }
+    </script>
+</body>
